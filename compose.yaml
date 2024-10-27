@@ -22,7 +22,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    container_name: django_dev
+    container_name: django_sql_dev
     command: sh -c "python3 manage.py migrate --noinput && python3 manage.py collectstatic --noinput && python manage.py runserver 0.0.0.0:8000"
     restart: always
     volumes:
@@ -32,7 +32,7 @@ services:
     env_file:
       - .env
     depends_on:
-      - db:
+      db:
           condition: service_healthy
 volumes:
   data:
