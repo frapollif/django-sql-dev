@@ -26,7 +26,7 @@ services:
     command: sh -c "python3 manage.py migrate --noinput && python3 manage.py collectstatic --noinput && python manage.py runserver 0.0.0.0:8000"
     restart: always
     volumes:
-      - /volume1/docker/django_sql_dev:/app
+      - /volume1/docker/django-sql-dev/app:/app
     ports:
       - "9898:8000"
     env_file:
