@@ -34,7 +34,7 @@ services:
     networks:
       - mysql-django
 volumes:
-  data:
+  db_data:
 
 networks:
   mysql-django:
