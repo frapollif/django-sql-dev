@@ -13,7 +13,7 @@ services:
       MYSQL_DATABASE: yourdb
       MYSQL_PASSWORD: password
     networks:
-      - mysql-phpmyadmin
+      - mysql-django
   
   backend:
     build: 
@@ -31,5 +31,7 @@ services:
     depends_on:
       db:
           condition: service_healthy
+    networks:
+      - mysql-django
 volumes:
   data:
