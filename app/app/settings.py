@@ -79,9 +79,10 @@ WSGI_APPLICATION = 'app.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+ # 'ENGINE': 'mysql.connector.django',
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'yourdb',
         'USER': 'root',
         'PASSWORD': 'password',
