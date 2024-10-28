@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'yourdb',
         'USER': 'root',
         'PASSWORD': 'password',
-        'HOST':'host.docker.internal',
+        'HOST':'localhost',
         'PORT':'3306',
     }
 }
